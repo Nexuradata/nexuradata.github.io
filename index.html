@@ -1,143 +1,100 @@
 <!DOCTYPE html>
-<html lang="en font-sans">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexura Dynamics | Turnkey Interior, EV & Corporate Infrastructure</title>
-    <style>
-        /* Modern Native Design Engine - 100% Self-Contained */
-        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { background-color: #0f172a; color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; antialiased: true; }
-       
-        /* Layout Wrappers */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-       
-        /* Top Navigation Bar */
-        nav { background-color: #020617; border-bottom: 1px solid #1e293b; position: sticky; top: 0; z-index: 100; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3); }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
-        .logo-frame { background-color: #ffffff; padding: 8px 16px; rounded-width: 8px; border-radius: 8px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.06); display: inline-block; }
-        .logo-img { height: 48px; width: auto; display: block; object-fit: contain; }
-        .nav-links a { color: #cbd5e1; text-decoration: none; margin-left: 24px; font-weight: 500; font-size: 15px; transition: color 0.2s; }
-        .nav-links a:hover { color: #34d399; }
-        .btn-nav { background: linear-gradient(135deg, #2563eb, #10b981); color: #ffffff !important; padding: 10px 20px; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-       
-        /* Main Banner Section */
-        header { padding: 120px 24px; text-align: center; background: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%); border-bottom: 1px solid #0f172a; position: relative; }
-        .badge { display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase; tracking-spacing: 0.1em; color: #34d399; background-color: rgba(6, 78, 59, 0.5); padding: 6px 14px; border-radius: 9999px; border: 1px solid rgba(6, 95, 70, 0.5); margin-bottom: 24px; letter-spacing: 1px; }
-        h1 { font-size: 48px; font-weight: 900; line-height: 1.15; margin-bottom: 24px; letter-spacing: -0.025em; color: #ffffff; }
-        .gradient-text { background: linear-gradient(to right, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-p { font-size: 20px; color: #94a3b8; max-width: 700px; margin: 0 auto 40px auto; line-height: 1.6; }
-        .btn-main { background: linear-gradient(135deg, #3b82f6, #34d399); color: #020617; font-weight: 700; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-size: 18px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); display: inline-block; transition: transform 0.2s; }
-        .btn-main:hover { transform: translateY(-2px); }
-       
-        /* Grid Grid Section */
-        .services-section { padding: 96px 0; }
-        .section-title { text-align: center; font-size: 36px; font-weight: 800; color: #ffffff; margin-bottom: 12px; }
-        .section-bar { height: 6px; width: 80px; background: linear-gradient(to right, #3b82f6, #34d399); margin: 0 auto 64px auto; border-radius: 9999px; }
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-        .card { background-color: #020617; padding: 40px 32px; border-radius: 16px; border: 1px solid #1e293b; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; transition: border-color 0.3s; }
-        .card:hover { border-color: rgba(59, 130, 246, 0.4); }
-        .icon-box { width: 56px; height: 56px; background-color: #0f172a; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 24px; border: 1px solid #1e293b; }
-        .card h3 { font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 12px; }
-        .card p { color: #94a3b8; font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
-        .bullet-list { border-top: 1px solid #1e293b; padding-top: 20px; list-style: none; }
-        .bullet-list li { font-size: 14px; color: #cbd5e1; margin-bottom: 10px; display: flex; align-items: center; }
-        .bullet-list li span { color: #34d399; margin-right: 8px; font-weight: bold; }
-       
-        /* About Statement Paragraph Container */
-        .about-section { background-color: #020617; border-top: 1px solid #0f172a; border-bottom: 1px solid #0f172a; padding: 96px 24px; text-align: center; }
-        .about-max { max-width: 800px; margin: 0 auto; }
-        .about-p { font-size: 18px; color: #94a3b8; line-height: 1.7; margin-bottom: 48px; }
-        .stats-grid { display: flex; justify-content: space-around; max-width: 600px; margin: 0 auto; }
-        .stat-item { font-size: 24px; font-weight: 900; background: linear-gradient(to right, #60a5fa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .stat-lbl { font-size: 11px; color: #64748b; text-transform: uppercase; margin-top: 4px; font-weight: 600; letter-spacing: 1px; -webkit-text-fill-color: #64748b; }
-
-        /* Split Contact Management Frame */
-        .contact-section { padding: 96px 0; }
-        .split-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: start; }
-        .info-header { font-size: 32px; font-weight: 800; color: #ffffff; margin-bottom: 16px; }
-        .info-desc { color: #94a3b8; line-height: 1.6; margin-bottom: 40px; }
-        .contact-row { display: flex; align-items: start; margin-bottom: 28px; }
-        .row-icon { font-size: 20px; margin-right: 16px; margin-top: 2px; }
-        .row-title { font-weight: 700; color: #ffffff; font-size: 16px; margin-bottom: 4px; }
-        .row-data { color: #94a3b8; line-height: 1.5; font-size: 15px; }
-        .row-data a { color: #3b82f6; text-decoration: none; }
-        .row-data a:hover { text-decoration: underline; }
-       
-        /* Structural Side Panel Card Box */
-        .intake-box { background-color: #020617; padding: 40px; border-radius: 24px; border: 1px solid #1e293b; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
-        .intake-box h3 { font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 24px; }
-        .lbl-block { display: block; font-size: 11px; font-weight: 700; color: #34d399; text-transform: uppercase; tracking-spacing: 0.05em; margin-bottom: 8px; letter-spacing: 1px; }
-        .card-embed { background-color: #0f172a; padding: 20px; border-radius: 12px; border: 1px solid #1e293b; }
-        .embed-name { font-size: 18px; font-weight: 700; color: #ffffff; }
-        .embed-title { font-size: 12px; color: #64748b; font-weight: 600; margin-top: 2px; text-transform: uppercase; }
-        .intake-note { font-size: 13px; color: #64748b; line-height: 1.6; margin-top: 24px; }
-
-        /* Footer Elements */
-        footer { background-color: #020617; text-align: center; padding: 32px; border-top: 1px solid #0f172a; color: #475569; font-size: 14px; }
-       
-        /* Mobile System Scale Changes */
-        @media (max-width: 768px) {
-            h1 { font-size: 34px; }
-            .nav-links { display: none; }
-            .split-2 { gap: 40px; }
-            .stats-grid { gap: 16px; }
-        }
-    </style>
 </head>
-<body>
+<body style="background-color: #0b0f19; color: #e2e8f0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased;">
 
-    <!-- Premium Dark Navbar to Match Logo Background -->
-    <nav>
-        <div class="container nav-flex">
-            <div class="logo-frame">
-                <img src="logo.png" alt="Nexura Dynamics Logo" class="logo-img">
+    <!-- Premium Header Navigation -->
+    <div style="background-color: #030712; padding: 20px 24px; border-bottom: 2px solid #1e293b; box-shadow: 0 4px 20px rgba(0,0,0,0.5); position: sticky; top: 0; z-index: 100;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+           
+            <!-- White Logo Frame Block - Enriched, Brighter, and Larger Setup -->
+            <div style="background-color: #ffffff; padding: 14px 32px; border-radius: 12px; box-shadow: 0 6px 20px rgba(255,255,255,0.08), 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; border: 1px solid #334155;">
+                <img src="logo.png" alt="Nexura Dynamics" style="height: 80px; width: auto; display: block; filter: brightness(1.05) drop-shadow(0px 2px 8px rgba(0,0,0,0.15));">
             </div>
-            <div class="nav-links">
-                <a href="#services">Our Expertise</a>
-                <a href="#about">Why Nexura</a>
-                <a href="#contact" class="btn-nav">Get in Touch</a>
+
+            <!-- Navigation Links Matrix -->
+            <div style="display: flex; align-items: center;">
+                <a href="#services" style="color: #cbd5e1; text-decoration: none; margin-right: 24px; font-weight: 600; font-size: 16px;">Our Expertise</a>
+                <a href="#about" style="color: #cbd5e1; text-decoration: none; margin-right: 24px; font-weight: 600; font-size: 16px;">Why Nexura</a>
+                <a href="mailto:Prashanth.s@nexuradynamics.com" style="background: linear-gradient(135deg, #2563eb, #10b981); color: #ffffff; text-decoration: none; padding: 12px 26px; border-radius: 8px; font-weight: 700; font-size: 15px; display: inline-block; box-shadow: 0 4px 12px rgba(29,78,216,0.35);">Get in Touch</a>
             </div>
         </div>
-    </nav>
+    </div>
 
-    <!-- Sleek Corporate Hero Section -->
-    <header>
-        <div class="container">
-            <span class="badge">Infrastructure Solutions</span>
-            <h1>Engineering Tomorrow's Infrastructure, <span class="gradient-text">Today</span></h1>
-            <p class="hero-p">End-to-end execution for commercial turnkey interiors, robust EV charge point infrastructure, and automated workplace health systems.</p>
-            <a href="#contact" class="btn-main">Discuss Your Project</a>
+    <!-- Corporate Hero Strategic Statement -->
+    <div style="background: radial-gradient(circle at center, #1e1b4b 0%, #030712 100%); padding: 110px 24px; text-align: center; border-bottom: 1px solid #1e293b;">
+        <div style="max-width: 850px; margin: 0 auto;">
+            <span style="color: #10b981; background-color: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: inline-block; margin-bottom: 24px;">Corporate Infrastructure Solutions</span>
+            <h1 style="color: #ffffff; font-size: 48px; font-weight: 900; margin: 0 0 20px 0; line-height: 1.2; letter-spacing: -0.5px;">Engineering Tomorrow's Infrastructure, <span style="color: #38bdf8;">Today</span></h1>
+            <p style="color: #94a3b8; font-size: 20px; line-height: 1.6; margin: 0 0 36px 0;">End-to-end execution for commercial turnkey interiors, robust EV charge point infrastructure, and automated workplace safety systems.</p>
+            <a href="#contact" style="background: linear-gradient(135deg, #3b82f6, #10b981); color: #030712; text-decoration: none; padding: 16px 36px; border-radius: 10px; font-weight: 800; font-size: 17px; display: inline-block; box-shadow: 0 10px 25px rgba(16,185,129,0.25);">Discuss Your Project</a>
         </div>
-    </header>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services" class="container services-section">
-        <h2 class="section-title">Our Core Infrastructure Verticals</h2>
-        <div class="section-bar"></div>
+    <!-- Core Business Lines Verticals Layout Section -->
+    <div id="services" style="max-width: 1200px; margin: 0 auto; padding: 90px 24px;">
+        <div style="text-align: center; margin-bottom: 56px;">
+            <h2 style="color: #ffffff; font-size: 34px; font-weight: 800; margin: 0 0 12px 0;">Our Core Infrastructure Verticals</h2>
+            <div style="height: 5px; width: 80px; background: linear-gradient(to right, #3b82f6, #10b981); margin: 0 auto; border-radius: 10px;"></div>
+        </div>
 
-        <div class="grid-3">
-            <!-- Vertical 1 -->
-            <div class="card">
+        <!-- Inline Flexbox Grid Grid System -->
+        <div style="display: flex; flex-wrap: wrap; gap: 28px; justify-content: center;">
+           
+            <!-- Vertical Item Block 1 -->
+            <div style="background-color: #030712; border: 1px solid #1e293b; padding: 40px 32px; border-radius: 16px; flex: 1; min-width: 320px; max-width: 370px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 <div>
-                    <div class="icon-box">🏢</div>
-                    <h3>Turnkey Interior Infra</h3>
-                    <p>End-to-end architectural engineering, space optimization, and fit-out executions built flawlessly for high-performance commercial and corporate hubs.</p>
+                    <div style="font-size: 36px; margin-bottom: 20px;">🏢</div>
+                    <h3 style="color: #ffffff; font-size: 22px; font-weight: 700; margin: 0 0 12px 0;">Turnkey Interior Infra</h3>
+                    <p style="color: #94a3b8; font-size: 14.5px; line-height: 1.6; margin: 0 0 24px 0;">End-to-end architectural engineering, space optimization, and fit-out executions built flawlessly for high-performance commercial and corporate hubs.</p>
                 </div>
-                <ul class="bullet-list">
-                    <li><span>✔</span> Space Planning & Layout Designs</li>
-                    <li><span>✔</span> Comprehensive Civil Works</li>
-                    <li><span>✔</span> Premium Modern Fits & Finishes</li>
-                </ul>
+                <div style="border-top: 1px solid #1e293b; padding-top: 16px;">
+                    <div style="color: #e2e8f0; font-size: 13.5px; margin-bottom: 8px; font-weight: 600;"><span style="color: #3b82f6; margin-right: 8px;">✔</span> Space Planning & Layout Designs</div>
+                    <div style="color: #e2e8f0; font-size: 13.5px; margin-bottom: 8px; font-weight: 600;"><span style="color: #3b82f6; margin-right: 8px;">✔</span> Comprehensive Civil Works</div>
+                    <div style="color: #e2e8f0; font-size: 13.5px; font-weight: 600;"><span style="color: #3b82f6; margin-right: 8px;">✔</span> Premium Modern Fits & Finishes</div>
+                </div>
             </div>
 
-            <!-- Vertical 2 -->
-            <div class="card">
+            <!-- Vertical Item Block 2 -->
+            <div style="background-color: #030712; border: 1px solid #1e293b; padding: 40px 32px; border-radius: 16px; flex: 1; min-width: 320px; max-width: 370px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
                 <div>
-                    <div class="icon-box">⚡</div>
-                    <h3>EV Infra Setup for CPOs</h3>
-                    <p>Complete physical rollout framework for Charge Point Operators. We seamlessly handle structural setup alongside statutory government approvals.</p>
+                    <div style="font-size: 36px; margin-bottom: 20px;">⚡</div>
+                    <h3 style="color: #ffffff; font-size: 22px; font-weight: 700; margin: 0 0 12px 0;">EV Infra Setup for CPOs</h3>
+                    <p style="color: #94a3b8; font-size: 14.5px; line-height: 1.6; margin: 0 0 24px 0;">Complete physical rollout framework for Charge Point Operators. We seamlessly handle structural setup alongside statutory government approvals.</p>
                 </div>
-                <ul class="bullet-list">
-                    <li><span>✔</span> Civil & Electrical Frameworks</li>
-                    <li><span>✔</span> End-to-End DISCOM Liaising</li>
+                <div style="border-top: 1px solid #1e293b; padding-top: 16px;">
+                    <div style="color: #e2e8f0; font-size: 13.5px; margin-bottom: 8px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">✔</span> Civil & Electrical Frameworks</div>
+                    <div style="color: #e2e8f0; font-size: 13.5px; margin-bottom: 8px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">✔</span> End-to-End DISCOM Liaising</div>
+                    <div style="color: #e2e8f0; font-size: 13.5px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">✔</span> Substation & Transformer Setups</div>
+                </div>
+            </div>
+
+            <!-- Vertical Item Block 3 -->
+            <div style="background-color: #030712; border: 1px solid #1e293b; padding: 40px 32px; border-radius: 16px; flex: 1; min-width: 320px; max-width: 370px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div>
+                    <div style="font-size: 36px; margin-bottom: 20px;">🛡️</div>
+                    <h3 style="color: #ffffff; font-size: 22px; font-weight: 700; margin: 0 0 12px 0;">Helmet Sanitization</h3>
+                    <p style="color: #94a3b8; font-size: 14.5px; line-height: 1.6; margin: 0 0 24px 0;">Smart, touchless rapid-cleaning automated vending solutions built to optimize institutional wellness across crowded modern ecosystems.</p>
+                </div>
+                <div style="border-top: 1px solid #1e293b; padding-top: 16px;">
+                    <div style="color: #e2e8f0; font-size: 13.5px; margin-bottom: 8px; font-weight: 600;"><span style="color: #a855f7; margin-right: 8px;">✔</span> Touchless IoT-Driven Systems</div>
+                    <div style="color: #e2e8f0; font-size: 13.5px; margin-bottom: 8px; font-weight: 600;"><span style="color: #a855f7; margin-right: 8px;">✔</span> UV & Ozone Disinfection</div>
+                    <div style="color: #e2e8f0; font-size: 13.5px; font-weight: 600;"><span style="color: #a855f7; margin-right: 8px;">✔</span> Large Corporate Deployments</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Strategic Focus Section Overview -->
+    <div id="about" style="background-color: #030712; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; padding: 90px 24px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="color: #ffffff; font-size: 34px; font-weight: 800; margin-bottom: 20px;">Why Partner With Nexura Dynamics?</h2>
+            <p style="color: #94a3b8; font-size: 18px; line-height: 1.7; margin-bottom: 40px;">
+                Nexura Dynamics stands at the intersection of high-tier structural engineering, comprehensive regulatory workflow clearing, and institutional automation. Whether we are clearing grid frameworks with regional power distribution utilities (DISCOM), delivering custom visual office environments, or driving automated safety features down to corporate fleets, we deliver true end-to-end turnkey ease.
+            </p>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
