@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Company Profile | Nexura Dynamics</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background: #f4f7f9;
+    }
+
+    .header {
+      height: 64px;
+      background: #ffffff;
+      border-top: 4px solid #67B900;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #183246;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .back {
+      color: #0878C9;
+      border: 1px solid #0878C9;
+      background: white;
+    }
+
+    .download {
+      color: white;
+      background: linear-gradient(90deg, #0878C9, #67B900);
+    }
+
+    .viewer {
+      width: 100%;
+      height: calc(100vh - 64px);
+      border: 0;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        padding: 0 10px;
+      }
+
+      .title {
+        font-size: 14px;
+      }
+
+      .btn {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="title">Nexura Dynamics — Company Profile</div>
+
+    <div class="actions">
+      <a class="btn back" href="./">Back</a>
+
+      <a class="btn download"
+         href="Nexura_Dynamics_Company_Profile.pdf"
+         download>
+        Download PDF
+      </a>
+    </div>
+  </header>
+
+  <iframe
+    class="viewer"
+    src="Nexura_Dynamics_Company_Profile.pdf#view=FitH"
+    title="Nexura Dynamics Company Profile">
+  </iframe>
+
+</body>
+</html>
