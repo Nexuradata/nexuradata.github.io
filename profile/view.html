@@ -4,75 +4,292 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Company Profile | Nexura Dynamics</title>
-  <style>
-    * { box-sizing: border-box; }
+  <meta name="description" content="Nexura Dynamics company profile - integrated turnkey and infrastructure solutions.">
 
-    html, body {
-      margin: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-      background: #f4f7f9;
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    .header {
-      height: 64px;
-      background: #ffffff;
-      border-top: 4px solid #67B900;
-      border-bottom: 1px solid #e2e8f0;
+    :root {
+      --blue: #0878C9;
+      --green: #67B900;
+      --dark: #183246;
+      --text: #475569;
+      --light: #f5f8fa;
+      --border: #e2e8f0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    .topline {
+      height: 5px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
+      gap: 20px;
     }
 
-    .title {
+    .brand {
       font-size: 18px;
       font-weight: 700;
-      color: #183246;
+      color: var(--dark);
     }
 
-    .actions {
+    .nav-actions {
       display: flex;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .btn {
+      display: inline-block;
       text-decoration: none;
+      font-weight: 700;
       padding: 10px 16px;
       border-radius: 8px;
       font-size: 14px;
-      font-weight: 600;
     }
 
-    .back {
-      color: #0878C9;
-      border: 1px solid #0878C9;
-      background: white;
+    .btn-back {
+      color: var(--blue);
+      background: #fff;
+      border: 1px solid var(--blue);
     }
 
-    .download {
-      color: white;
-      background: linear-gradient(90deg, #0878C9, #67B900);
+    .btn-download {
+      color: #fff;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+      border: 1px solid transparent;
     }
 
-    .viewer {
+    main {
+      max-width: 1100px;
+      margin: 34px auto;
+      padding: 0 24px 50px;
+    }
+
+    .profile {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(24, 50, 70, 0.08);
+    }
+
+    .profile-line {
+      height: 6px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    .hero {
+      padding: 48px 50px 36px;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .logo {
       width: 100%;
-      height: calc(100vh - 64px);
-      border: 0;
-      display: block;
+      max-width: 210px;
+      height: auto;
     }
 
-    @media (max-width: 600px) {
-      .header {
-        padding: 0 10px;
+    .hero h1 {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1.15;
+      color: var(--dark);
+    }
+
+    .tagline {
+      margin: 5px 0 16px;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .intro {
+      margin: 0;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .section {
+      padding: 10px 50px 42px;
+    }
+
+    .section-title {
+      margin: 0 0 20px;
+      font-size: 22px;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      margin-top: 8px;
+      width: 72px;
+      height: 4px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--blue), var(--green));
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      background: #fff;
+    }
+
+    .card:nth-child(1),
+    .card:nth-child(3) {
+      border-top: 4px solid var(--blue);
+    }
+
+    .card:nth-child(2),
+    .card:nth-child(4) {
+      border-top: 4px solid var(--green);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--dark);
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .why {
+      background: #f8fafc;
+      padding-top: 36px;
+      padding-bottom: 40px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .why-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .why-item h4 {
+      margin: 0 0 7px;
+      color: var(--dark);
+      font-size: 16px;
+    }
+
+    .why-item p {
+      margin: 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 36px 30px;
+      background: var(--dark);
+      color: #fff;
+    }
+
+    .contact h2 {
+      margin: 0 0 8px;
+    }
+
+    .contact p {
+      margin: 5px 0;
+      color: #dbe5eb;
+    }
+
+    .contact a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        padding: 12px 15px;
       }
 
-      .title {
-        font-size: 14px;
+      .brand {
+        font-size: 15px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 35px 24px 28px;
+        gap: 22px;
+      }
+
+      .logo {
+        margin: auto;
+        max-width: 175px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .section {
+        padding: 10px 22px 32px;
+      }
+
+      .grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-actions {
+        justify-content: flex-end;
       }
 
       .btn {
-        padding: 8px 10px;
+        padding: 8px 11px;
         font-size: 12px;
       }
     }
@@ -81,25 +298,168 @@
 
 <body>
 
-  <header class="header">
-    <div class="title">Nexura Dynamics — Company Profile</div>
+<div class="topline"></div>
 
-    <div class="actions">
-      <a class="btn back" href="./">Back</a>
+<header>
+  <div class="nav">
+    <div class="brand">Nexura Dynamics — Company Profile</div>
 
-      <a class="btn download"
+    <div class="nav-actions">
+      <a class="btn btn-back" href="./">Back</a>
+
+      <a class="btn btn-download"
          href="Nexura_Dynamics_Company_Profile.pdf"
          download>
         Download PDF
       </a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <iframe
-    class="viewer"
-    src="Nexura_Dynamics_Company_Profile.pdf#view=FitH"
-    title="Nexura Dynamics Company Profile">
-  </iframe>
+<main>
+
+  <article class="profile">
+
+    <div class="profile-line"></div>
+
+    <section class="hero">
+
+      <div>
+        <img class="logo"
+             src="../logo.png"
+             alt="Nexura Dynamics">
+      </div>
+
+      <div>
+        <h1>Nexura Dynamics</h1>
+
+        <div class="tagline">Connecting Progress</div>
+
+        <p class="intro">
+          Nexura Dynamics delivers integrated project execution and
+          infrastructure solutions for businesses seeking a dependable
+          partner from planning through implementation. Our focus is
+          practical coordination, disciplined execution and responsive
+          delivery across interiors, EV infrastructure and workplace /
+          campus wellness initiatives.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2 class="section-title">Core Capabilities</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Turnkey Interiors</h3>
+          <p>
+            End-to-end interior execution for commercial and institutional
+            spaces — from scope coordination and BOQ alignment to vendor
+            management, site execution and handover. A single-point approach
+            helps keep quality, timelines and communication aligned.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>EV Infrastructure &amp; BaaS</h3>
+          <p>
+            Execution support for the evolving EV ecosystem, including
+            home EV charger installation, charging-station infrastructure
+            setup and battery-swapping infrastructure. We support
+            Battery-as-a-Service infrastructure requirements for CPOs,
+            automotive companies and fleet operators, with vendor and
+            execution coordination focused on site and project
+            implementation rather than manufacturing charging hardware.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Helmet Sanitisation &amp; Wellness</h3>
+          <p>
+            Convenient helmet sanitisation solutions for corporates,
+            colleges and high-footfall campuses. Sanitisation vending
+            machines enable employees and students to access a simple
+            pay-per-use service supporting cleaner helmets and healthier
+            daily commuting.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Integrated Project Solutions</h3>
+          <p>
+            One coordinated execution partner for multi-vendor and
+            multi-discipline requirements. We help translate project
+            objectives into executable scopes, coordinate stakeholders,
+            track delivery and drive projects toward an orderly handover.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section why">
+
+      <h2 class="section-title">Why Nexura</h2>
+
+      <div class="why-grid">
+
+        <div class="why-item">
+          <h4>Execution Focus</h4>
+          <p>
+            Practical, site-oriented project delivery with attention to
+            quality, coordination and timelines.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h4>Single-Point Coordination</h4>
+          <p>
+            Coordinated communication between clients, vendors,
+            contractors and project stakeholders.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h4>Flexible Project Support</h4>
+          <p>
+            Support tailored to individual project requirements, from
+            defined execution packages to integrated turnkey delivery.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="contact">
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        For project enquiries and partnership opportunities
+      </p>
+
+      <p>
+        <a href="mailto:info@nexuradynamics.com">
+          info@nexuradynamics.com
+        </a>
+      </p>
+
+      <p>
+        <a href="https://nexuradynamics.com/">
+          www.nexuradynamics.com
+        </a>
+      </p>
+
+    </section>
+
+  </article>
+
+</main>
 
 </body>
 </html>
