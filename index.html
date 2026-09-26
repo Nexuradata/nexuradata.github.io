@@ -482,7 +482,24 @@
           </div>
 
           <!-- Static-hosting-friendly form. FormSubmit sends the form without your own server. -->
-          <form action="https://formsubmit.co/info@nexuradynamics.com" method="POST" onsubmit="gtag('event','contact_enquiry');"
+          <form action="https://formsubmit.co/info@nexuradynamics.com" method="POST" onsubmit="
+                  if (this.dataset.gaSubmitted === '1') return true;
+                  event.preventDefault();
+                  const form = this;
+                  form.dataset.gaSubmitted = '1';
+                  let submitted = false;
+                  const continueSubmit = () => {
+                    if (submitted) return;
+                    submitted = true;
+                    form.submit();
+                  };
+                  gtag('event', 'contact_enquiry', {
+                    'transport_type': 'beacon',
+                    'event_callback': continueSubmit
+                  });
+                  setTimeout(continueSubmit, 1000);
+                  return false;
+                " 
                 class="rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card">
             <input type="hidden" name="_subject" value="New enquiry — Nexura Dynamics">
             <input type="hidden" name="_template" value="table">
