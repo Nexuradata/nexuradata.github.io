@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KFSC239S0S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KFSC239S0S');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nexura Dynamics — Connecting Progress. Integrated turnkey interiors, EV infrastructure and project solutions.">
@@ -451,7 +442,7 @@
             </p>
 
             <div class="mt-10 space-y-7">
-              <a href="mailto:info@nexuradynamics.com" class="flex gap-4 group">
+              <a href="mailto:info@nexuradynamics.com" onclick="gtag('event','email_click');" class="flex gap-4 group">
                 <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-green-400">✉</div>
                 <div>
                   <p class="text-sm text-slate-500">Email</p>
@@ -459,7 +450,7 @@
                 </div>
               </a>
 
-              <a href="tel:+919845172852" class="flex gap-4 group">
+              <a href="tel:+919845172852" onclick="gtag('event','phone_click');" class="flex gap-4 group">
                 <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-green-400">☎</div>
                 <div>
                   <p class="text-sm text-slate-500">Phone</p>
@@ -482,7 +473,7 @@
           </div>
 
           <!-- Static-hosting-friendly form. FormSubmit sends the form without your own server. -->
-          <form action="https://formsubmit.co/info@nexuradynamics.com" method="POST"
+          <form action="https://formsubmit.co/info@nexuradynamics.com" method="POST" onsubmit="gtag('event','contact_enquiry');"
                 class="rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card">
             <input type="hidden" name="_subject" value="New enquiry — Nexura Dynamics">
             <input type="hidden" name="_template" value="table">
