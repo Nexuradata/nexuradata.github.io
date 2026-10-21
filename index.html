@@ -481,8 +481,8 @@
         </div>
 
         <div class="mt-12 grid lg:grid-cols-2 gap-7 items-stretch">
-          <div>
-            <div class="mb-5">
+          <div class="flex flex-col h-full">
+            <div class="mb-5 min-h-[140px]">
               <p class="text-xs font-black uppercase tracking-[.18em] text-green-400">General enquiries</p>
               <h3 class="mt-2 text-2xl font-black">Projects & Partnerships</h3>
               <p class="mt-2 text-sm leading-6 text-slate-300">For turnkey interiors, EV infrastructure, home chargers, BaaS, helmet sanitisation and other project requirements.</p>
@@ -505,7 +505,7 @@
                   setTimeout(continueSubmit, 1000);
                   return false;
                 " 
-                class="rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card">
+                class="flex flex-col flex-1 min-h-[680px] rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card">
             <input type="hidden" name="_subject" value="New enquiry — Nexura Dynamics">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="true">
@@ -549,7 +549,7 @@
                 class="w-full rounded-xl border border-slate-200 px-4 py-3.5 outline-none resize-y focus:border-blue focus:ring-4 focus:ring-blue/10"></textarea>
             </div>
 
-            <button type="submit" class="mt-6 w-full rounded-xl gradient-bg text-white py-4 font-black hover:opacity-95 transition">
+            <button type="submit" class="mt-auto pt-6 w-full rounded-xl gradient-bg text-white py-4 font-black hover:opacity-95 transition">
               Send Enquiry
             </button>
 
@@ -558,13 +558,13 @@
             </p>
           </form>
           </div>
-          <div>
-            <div class="mb-5">
+          <div class="flex flex-col h-full">
+            <div class="mb-5 min-h-[140px]">
               <p class="text-xs font-black uppercase tracking-[.18em] text-green-400">Digital solutions</p>
               <h3 class="mt-2 text-2xl font-black">Consent Management</h3>
               <p class="mt-2 text-sm leading-6 text-slate-300">For digital consent-management and DPDP-related workflow enquiries.</p>
             </div>
-          <form id="consent-enquiry" action="https://formspree.io/f/mnpjkgda" method="POST" class="h-full rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card border border-blue/10" onsubmit="
+          <form id="consent-enquiry" action="https://formspree.io/f/mnpjkgda" method="POST" class="flex flex-col flex-1 min-h-[680px] rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card border border-blue/10" onsubmit="
                   if (this.dataset.gaSubmitted === '1') return true;
                   event.preventDefault();
                   const form = this;
@@ -618,7 +618,7 @@
               <label class="block text-sm font-bold mb-2" for="consent-message">What would you like to discuss? *</label>
               <textarea class="w-full rounded-xl border border-slate-200 px-4 py-3.5 outline-none resize-y focus:border-blue focus:ring-4 focus:ring-blue/10" id="consent-message" name="message" placeholder="Briefly describe your consent-management or DPDP-related requirement..." required rows="4"></textarea>
             </div>
-            <button class="mt-6 w-full rounded-xl gradient-bg text-white py-4 font-black hover:opacity-95 transition" type="submit">Send Consent Management Enquiry</button>
+            <button class="mt-auto pt-6 w-full rounded-xl gradient-bg text-white py-4 font-black hover:opacity-95 transition" type="submit">Send Consent Management Enquiry</button>
             <p class="mt-4 text-xs text-slate-500 text-center">Your details will be used to respond to this enquiry.</p>
           </form>
           </div>
