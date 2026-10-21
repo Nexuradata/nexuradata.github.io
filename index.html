@@ -472,57 +472,21 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-20 sm:py-28 bg-slate-950 text-white">
+    <section id="contact" class="py-20 sm:py-24 bg-slate-950 text-white">
       <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="grid lg:grid-cols-[.9fr_1.1fr] gap-14 items-start">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-sm font-black uppercase tracking-[.22em] text-green-400">Enquiries</p>
+          <h2 class="mt-3 text-4xl sm:text-5xl font-black tracking-tight">How can we help?</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-300">Choose the enquiry form that best fits your requirement. We'll understand your needs and follow up.</p>
+        </div>
 
+        <div class="mt-12 grid lg:grid-cols-2 gap-7 items-stretch">
           <div>
-            <p class="text-sm font-black uppercase tracking-[.22em] text-green-400">Contact</p>
-            <h2 class="mt-3 text-4xl sm:text-5xl font-black tracking-tight">Let's connect.</h2>
-            <p class="mt-5 text-lg leading-8 text-slate-300">
-              Tell us what you're planning. We'll understand the requirement and connect the right capabilities to take it forward.
-            </p>
-
-            <div class="mt-10 space-y-7">
-              <a href="mailto:info@nexuradynamics.com" onclick="gtag('event','email_click');" class="flex gap-4 group">
-                <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-green-400">✉</div>
-                <div>
-                  <p class="text-sm text-slate-500">Email</p>
-                  <p class="mt-1 font-bold group-hover:text-green-400 transition">info@nexuradynamics.com</p>
-                </div>
-              </a>
-
-              <a href="tel:+919845172852" onclick="gtag('event','phone_click');" class="flex gap-4 group">
-                <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-green-400">☎</div>
-                <div>
-                  <p class="text-sm text-slate-500">Phone</p>
-                  <p class="mt-1 font-bold group-hover:text-green-400 transition">+91 98451 72852</p>
-                </div>
-              </a>
-
-              <div class="flex gap-4">
-                <div class="w-12 h-12 shrink-0 rounded-2xl bg-white/10 flex items-center justify-center text-green-400">⌖</div>
-                <div>
-                  <p class="text-sm text-slate-500">Office</p>
-                  <p class="mt-1 font-bold leading-7">
-                    340, Vidyapeeta Layout,<br>
-                    Banashankari 3rd Stage,<br>
-                    Bangalore – 560085
-                  </p>
-                </div>
-              </div>
+            <div class="mb-5">
+              <p class="text-xs font-black uppercase tracking-[.18em] text-green-400">General enquiries</p>
+              <h3 class="mt-2 text-2xl font-black">Projects & Partnerships</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">For turnkey interiors, EV infrastructure, home chargers, BaaS, helmet sanitisation and other project requirements.</p>
             </div>
-
-            <!-- LinkedIn company page -->
-            <div class="mt-10 pt-8 border-t border-white/10">
-              <p class="text-slate-300 leading-7">Follow Nexura Dynamics on LinkedIn for project updates, industry insights and company news.</p>
-              <a href="https://www.linkedin.com/company/nexuradynamics/" target="_blank" rel="noopener noreferrer" onclick="if (typeof gtag === 'function') gtag('event', 'linkedin_click', {link_location: 'contact'});" class="mt-5 inline-flex items-center justify-center gap-3 rounded-xl gradient-bg px-6 py-3.5 text-white font-bold hover:opacity-95 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-400">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.46 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.29 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.99 0 3.58 1.97 3.58 4.53v5.24Z"/></svg><span>Follow us on LinkedIn</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Static-hosting-friendly form. FormSubmit sends the form without your own server. -->
           <form action="https://formsubmit.co/info@nexuradynamics.com" method="POST" onsubmit="
                   if (this.dataset.gaSubmitted === '1') return true;
                   event.preventDefault();
@@ -593,9 +557,14 @@
               By submitting this form, you are requesting contact from Nexura Dynamics.
             </p>
           </form>
-
-          <!-- Dedicated consent-management enquiry form. The Formspree endpoint is configured below; verify recipient routing in Formspree before publishing. Do not put the recipient email in this HTML. -->
-          <form id="consent-enquiry" action="https://formspree.io/f/mnpjkgda" method="POST" class="mt-8 rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card border border-blue/10" onsubmit="
+          </div>
+          <div>
+            <div class="mb-5">
+              <p class="text-xs font-black uppercase tracking-[.18em] text-green-400">Digital solutions</p>
+              <h3 class="mt-2 text-2xl font-black">Consent Management</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">For digital consent-management and DPDP-related workflow enquiries.</p>
+            </div>
+          <form id="consent-enquiry" action="https://formspree.io/f/mnpjkgda" method="POST" class="h-full rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card border border-blue/10" onsubmit="
                   if (this.dataset.gaSubmitted === '1') return true;
                   event.preventDefault();
                   const form = this;
@@ -652,10 +621,25 @@
             <button class="mt-6 w-full rounded-xl gradient-bg text-white py-4 font-black hover:opacity-95 transition" type="submit">Send Consent Management Enquiry</button>
             <p class="mt-4 text-xs text-slate-500 text-center">Your details will be used to respond to this enquiry.</p>
           </form>
+          </div>
+        </div>
 
+        <div class="mt-16 pt-12 border-t border-white/10 text-center">
+          <p class="text-sm font-black uppercase tracking-[.22em] text-green-400">Stay in touch</p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-black tracking-tight">Let's Connect.</h2>
+          <p class="mt-4 max-w-2xl mx-auto leading-7 text-slate-300">Have a question or want to explore a partnership? Reach Nexura Dynamics directly or follow our company updates on LinkedIn.</p>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+            <a href="mailto:info@nexuradynamics.com" onclick="if (typeof gtag === 'function') gtag('event','email_click');" class="font-bold text-white hover:text-green-400 transition">✉ info@nexuradynamics.com</a>
+            <a href="tel:+919845172852" onclick="if (typeof gtag === 'function') gtag('event','phone_click');" class="font-bold text-white hover:text-green-400 transition">☎ +91 98451 72852</a>
+            <span class="text-sm text-slate-400">Bangalore, Karnataka</span>
+          </div>
+          <a href="https://www.linkedin.com/company/nexuradynamics/" target="_blank" rel="noopener noreferrer" onclick="if (typeof gtag === 'function') gtag('event', 'linkedin_click', {link_location: 'contact'});" class="mt-7 inline-flex items-center justify-center gap-3 rounded-xl gradient-bg px-6 py-3.5 text-white font-bold hover:opacity-95 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-green-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96C2 21.32 2.69 22 3.55 22h16.9c.86 0 1.55-.68 1.55-1.52V3.52C22 2.68 21.31 2 20.45 2ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.46 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.29 10.85H15.8V14.1c0-1.11-.02-2.54-1.55-2.54-1.55 0-1.79 1.21-1.79 2.46v4.73H9.51V9.2h2.83v1.3h.04c.39-.74 1.36-1.52 2.79-1.52 2.99 0 3.58 1.97 3.58 4.53v5.24Z"/></svg><span>Follow us on LinkedIn</span>
+          </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
