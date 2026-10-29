@@ -553,7 +553,7 @@
               <h3 class="mt-2 text-2xl font-black">Projects & Partnerships</h3>
               <p class="mt-2 text-sm leading-6 text-slate-300">For turnkey interiors, EV infrastructure, home chargers, BaaS, helmet sanitisation and other project requirements.</p>
             </div>
-          <form action="https://formsubmit.co/info@nexuradynamics.com" method="POST" onsubmit="
+          <form action="https://api.web3forms.com/submit" method="POST" onsubmit="
                   if (this.dataset.gaSubmitted === '1') return true;
                   event.preventDefault();
                   const form = this;
@@ -572,12 +572,9 @@
                   return false;
                 " 
                 class="flex flex-col flex-1 min-h-[680px] lg:h-[820px] lg:min-h-0 rounded-[2rem] bg-white text-slate-900 p-6 sm:p-8 shadow-card">
-            <input type="hidden" name="_subject" value="New enquiry — Nexura Dynamics">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_next" value="https://www.nexuradynamics.com/#contact">
-
-            <div class="grid sm:grid-cols-2 gap-5">
+            <input type="hidden" name="access_key" value="45345e66-2b7f-4d07-b1c3-eefa9b7c4f8c">
+            <input type="hidden" name="subject" value="General Enquiry - Nexura Dynamics">
+              <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label for="name" class="block text-sm font-bold mb-2">Name *</label>
                 <input id="name" name="name" type="text" required placeholder="Your name"
